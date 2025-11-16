@@ -1,0 +1,7 @@
+;; Object app
+;; EDE Project Files are auto generated: Do Not Edit
+(ede-proj-project "app"
+  :file "Project.ede"
+  :name "app"
+  :targets nil
+  :object-name "app")
