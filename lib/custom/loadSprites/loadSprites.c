@@ -68,24 +68,24 @@ void uploadSprite(SpriteImage **dataImages) {
       dataImages[x] = dataImage;
      }
 
-     dataImages[0]->filenameball = "/home/useralex/twopoint/image/1.png";
+     dataImages[0]->filenameball = "./image/1.png";
      getPng(dataImages[0]->filenameball, dataImages[0]->row_pointers_balls);
-     dataImages[1]->filenameball = "/home/useralex/twopoint/image/2.png";
+     dataImages[1]->filenameball = "./image/2.png";
      getPng(dataImages[1]->filenameball, dataImages[1]->row_pointers_balls);
-     dataImages[2]->filenameball = "/home/useralex/twopoint/image/3.png";
+     dataImages[2]->filenameball = "./image/3.png";
      getPng(dataImages[2]->filenameball, dataImages[2]->row_pointers_balls);
      
-     dataImages[3]->filenameball = "/home/useralex/twopoint/image/4.png";
+     dataImages[3]->filenameball = "./image/4.png";
      getPng(dataImages[3]->filenameball, dataImages[3]->row_pointers_balls);
-     dataImages[4]->filenameball = "/home/useralex/twopoint/image/5.png";
+     dataImages[4]->filenameball = "./image/5.png";
      getPng(dataImages[4]->filenameball, dataImages[4]->row_pointers_balls);
-     dataImages[5]->filenameball = "/home/useralex/twopoint/image/6.png";
+     dataImages[5]->filenameball = "./image/6.png";
      getPng(dataImages[5]->filenameball, dataImages[5]->row_pointers_balls);     
-     dataImages[6]->filenameball = "/home/useralex/twopoint/image/7.png";
+     dataImages[6]->filenameball = "./image/7.png";
      getPng(dataImages[6]->filenameball, dataImages[6]->row_pointers_balls);
-     dataImages[7]->filenameball = "/home/useralex/twopoint/image/8.png";
+     dataImages[7]->filenameball = "./image/8.png";
      getPng(dataImages[7]->filenameball, dataImages[7]->row_pointers_balls);
-     dataImages[8]->filenameball = "/home/useralex/twopoint/image/9.png";
+     dataImages[8]->filenameball = "./image/9.png";
      getPng(dataImages[8]->filenameball, dataImages[8]->row_pointers_balls);
 
      // выведем
