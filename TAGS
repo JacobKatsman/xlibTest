@@ -1,0 +1,240 @@
+
+image/10.png,0
+
+image/cubic/pngtree-realistic-3d-ice-cubes-isolated-on-transparent-background-png-image_4976787.png,0
+
+image/cubic/large_pngtree-realistic-3d-ice-cubes-isolated-on-transparent-background-png-image_4976787.png,0
+
+image/cubic/omid_pngtree-realistic-3d-ice-cubes-isolated-on-transparent-background-png-image_4976787.png,0
+
+image/cubic/square-gummies-colorful-jelly-cubes-in-various-flavors-rY7uymxM.jpg,0
+
+image/cubic/3d user icon on blue_21135326.png,0
+
+image/cubic/imgbin_a06279ed180937fb5d6d7357b38e1833.png,0
+
+image/9.png,0
+
+image/5.png,0
+
+image/ball_small-01.png,0
+
+image/ball001.png,0
+
+image/A1200-1200.png,0
+
+image/test/10.png,0
+
+image/test/2(2).png,0
+
+image/test/9.png,0
+
+image/test/5(2).png,0
+
+image/test/5.png,0
+
+image/test/3(2).png,0
+
+image/test/ball_small-01.png,0
+
+image/test/ball001.png,0
+
+image/test/7(2).png,0
+
+image/test/A1200-1200.png,0
+
+image/test/8.png,0
+
+image/test/7.png,0
+
+image/test/4.png,0
+
+image/test/8(2).png,0
+
+image/test/6(2).png,0
+
+image/test/1.png,0
+
+image/test/3.png,0
+
+image/test/1(2).png,0
+
+image/test/9(2).png,0
+
+image/test/6.png,0
+
+image/test/2.png,0
+
+image/test/4(2).png,0
+
+image/8.png,0
+
+image/7.png,0
+
+image/4.png,0
+
+image/1.png,0
+
+image/3.png,0
+
+image/6.png,0
+
+image/2.png,0
+
+TAGS,0
+
+README.md,0
+
+LICENSE,0
+
+Makefile,559
+CC := gccCC2,1
+CFLAGS := -pedantic -Wall -Wwrite-strings -g3 -w -Wextra -Iinclude -MMD -MP -lX11 -lXext -lcryptCFLAGS3,11
+TARGET := myappTARGET5,148
+SRC_DIR := 'lib'SRC_DIR8,239
+SOURCES := $(shell find $(SRC_DIR) -name '*.c')SOURCES9,256
+OBJ_DIR := buildOBJ_DIR12,376
+OBJECTS := $(patsubst $(SRC_DIR)/%.c,$(OBJ_DIR)/%.o,$(SOURCES))OBJECTS13,393
+DEPS := $(shell find include -name '*.h')DEPS16,576
+all: $(TARGET)all19,647
+$(TARGET): $(OBJECTS)$(TARGET)21,663
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c $(DEPS)$(OBJ_DIR)/%.o25,781
+clean:clean30,888
+
+include/main.h,173
+#define LENGHT LENGHT2,65
+#define WIDTH WIDTH5,130
+#define HEIGHT HEIGHT6,150
+#define PWIDTH PWIDTH9,216
+#define PHEIGHT PHEIGHT10,236
+#define STYPE STYPE13,312
+
+include/logic.h,1155
+#define LOGIC_HLOGIC_H12,512
+#define MAX MAX13,528
+ #define SYMBOLSYMBOL17,568
+ typedef int xCoor;xCoor19,585
+ typedef int yCoor;               yCoor20,605
+ typedef int stateActive;            // активностьstateActive21,640
+ typedef long double stateAngel;     // угол поворотаstateAngel22,701
+ typedef int stateClockwise;         // угол поворотаstateClockwise23,767
+ typedef int stateCost;              // стоимостьstateCost24,833
+ typedef int stateSpeed;             // скоростьstateSpeed25,892
+ typedef int stateType;              // тип спрайтаstateType26,949
+ typedef struct SpriteItem {SpriteItem28,1012
+    xCoor xcoor;xcoor29,1041
+    yCoor ycoor;ycoor30,1058
+    stateActive active;active31,1075
+    stateAngel degrees;degrees32,1099
+    stateClockwise clockwise;clockwise33,1123
+    stateCost cost;cost34,1153
+    stateSpeed speed;speed35,1173
+    stateType type;type36,1195
+} SpriteItem;SpriteItem38,1220
+#define BEGIN_Y_COOR BEGIN_Y_COOR45,1349
+#define BEGIN_X_COOR BEGIN_X_COOR46,1376
+#define POSSIBILITIES_P POSSIBILITIES_P47,1403
+
+include/test.h,0
+
+include/mathCalc.h,590
+typedef long double sAngel; // угол поворотаsAngel2,30
+typedef struct SpriteRotate {SpriteRotate4,88
+    sAngel x;x5,118
+    sAngel y;y6,132
+} SpriteRotate;SpriteRotate7,146
+typedef struct SpriteRotateCoord {SpriteRotateCoord9,163
+    int    l;l10,198
+    sAngel x;x11,212
+    sAngel y;y12,226
+    sAngel xstart;xstart13,240
+    sAngel ystart;    ystart14,259
+} SpriteRotateCoord;SpriteRotateCoord15,282
+typedef struct colorRGB {colorRGB18,335
+    int R;R19,361
+    int G;G20,372
+    int B;B21,383
+    int A;A22,394
+} colorRGB;colorRGB23,405
+
+include/loadSprites.h,289
+typedef struct SpriteImage {SpriteImage2,39
+    char *filenameball;  //указатель на имя файлаfilenameball3,68
+    png_bytep *row_pointers_balls; // указатель на прочитанную структrow_pointers_balls4,137
+} SpriteImage;SpriteImage5,277
+
+include/custom.h,401
+typedef struct Context {Context7,181
+        Display *display;display8,206
+        GC gc_red;gc_red9,232
+        Window window; window10,251
+        int screen;screen11,275
+} Context;Context12,295
+typedef struct ShmStructure {ShmStructure15,389
+    XShmSegmentInfo shm;shm16,419
+    XImage *image;image17,444
+}  ShmStructure;ShmStructure18,463
+static char *msgB[] = {msgB49,1778
+
+include/pngimage.h,306
+typedef struct PngImage{PngImage2,17
+    int width;width3,42
+    int height;height4,57
+    png_byte color_type;color_type5,73
+    png_byte bit_depth;bit_depth6,98
+    png_bytep *row_pointers;row_pointers7,122
+    png_bytep *row_pointers_ball;row_pointers_ball8,151
+} PngImage;PngImage9,185
+
+include/bitmap.h,45
+   uint8_t bitmap_8[10][8] = {bitmap_82,59
+
+include/getPng.h,0
+
+presentation/vokoscreen-2025-11-16_10-26-56.mp4,0
+
+Project.ede,0
+
+main.c,48
+int main(int argc, char *argv[]) {main77,4530
+
+lib/custom/getPng/getPng.c,92
+png_bytep* getPng(const char *filenamebackground1, png_bytep *row_pointers){getPng21,1527
+
+lib/custom/custom.c,1243
+int error_handler(Display *display, XErrorEvent *error){error_handler42,1998
+void fix_window_size (Context* p) {fix_window_size49,2215
+int clearEntropyRandomNumber(unsigned int* random_ints, size_t array_size){clearEntropyRandomNumber63,2940
+int createWindowCustom (Context* p) { createWindowCustom76,3535
+int checkShm (Context* p) {checkShm94,4110
+int createShm (Context* p, ShmStructure* s) {createShm106,4407
+void renderBackground (ShmStructure* s, png_bytep *row_pointers) {renderBackground136,5474
+void renderLetter (ShmStructure* s, SpriteItem* itemSprite, int x1, int y1, int l){renderLetter151,6146
+void  renderSprite (ShmStructure* s, png_bytep *row_pointers_ball, SpriteItem* itemSprite, int lrenderSprite182,7577
+int generateField (Context* p,ShmStructure* s, SpriteItem* itemSprite,generateField254,11003
+int block1Loop (Context* p, ShmStructure* s) {block1Loop272,11678
+int block2Loop (Context* p, ShmStructure* s) {block2Loop294,12378
+int switchLoop (Context* p, ShmStructure* s, SpriteItem* itemSprite) {switchLoop300,12527
+void initRenderWindow(Context* p,initRenderWindow325,13311
+void renderWindow(Context* p,renderWindow340,13875
+int mainLoop (Context* p, ShmStructure* s) {mainLoop358,14528
+
+lib/custom/mathCalc/mathCalc.c,264
+void calcRotate(SpriteRotate* sr, SpriteRotateCoord* srCoor, SpriteItem* itemSprite){calcRotate24,1597
+int blend_channel (int B, int F,blend_channel102,4921
+void overlappingTransparency(colorRGB *c,png_bytep px, int pixel1[]){overlappingTransparency109,5201
+
+lib/custom/loadSprites/loadSprites.c,272
+SpriteImage* alloctionDataStruct() {alloctionDataStruct24,1693
+int initArrChar(SpriteImage* sImage, const char* source) {initArrChar37,2124
+int initPngBytes(SpriteImage* sImage) {initPngBytes47,2513
+void uploadSprite(SpriteImage **dataImages) {uploadSprite56,2831
+
+lib/logic/logic.c,198
+void initLogic(SpriteItem* itemSprite, int i) {initLogic19,807
+void calcLogic(SpriteItem* itemSprite, int i) {calcLogic80,3039
+void fillLogic(SpriteItem* itemSprite, int i) {fillLogic116,4117
+
+lib/pngimage/pngimage.c,132
+PngImage read_png_file(const char *filename) {read_png_file24,1589
+void free_png_image(PngImage *image) {free_png_image103,4245
