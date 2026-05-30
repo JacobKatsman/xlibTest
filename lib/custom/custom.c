@@ -361,7 +361,7 @@ int mainLoop (Context* p, ShmStructure* s) {
     const useconds_t delay = (useconds_t)(1000000 / fps);
  
     SpriteItem* itemSprite = (SpriteItem*)malloc(LENGHT * sizeof(SpriteItem));
-    const char *filenamebackground = "/home/useralex/twopoint/image/A1200-1200.png";
+    const char *filenamebackground = "./image/A1200-1200.png";
     //PngImage imagebackground = read_png_file(filenamebackground);
     // Выделение памяти для данных
     png_bytep *row_pointers = (png_bytep*)malloc(sizeof(png_bytep) * WIDTH  * HEIGHT);

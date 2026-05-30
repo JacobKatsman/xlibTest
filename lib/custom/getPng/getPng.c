@@ -22,7 +22,8 @@ png_bytep* getPng(const char *filenamebackground1, png_bytep *row_pointers){
     // 1. Открытие файла  фона  
     FILE *fp = fopen(filenamebackground1, "rb");
     if (!fp) {
-        perror("File open error");
+        fprintf(stderr, "Ошибка открытия файла %s: ", filenamebackground1);
+        perror(NULL);
     }
     // 2. Проверка сигнатуры PNG
     png_byte header[8];
